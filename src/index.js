@@ -29,6 +29,7 @@ const allowedOrigins = [
   'http://localhost:8080',
   'http://localhost:3000',
   process.env.FRONTEND_URL,
+  'https://groomxfrontend1v1-bd236yliv-santanu-shaws-projects.vercel.app',
 ].filter(Boolean);
 
 app.use((req, res, next) => {
@@ -59,6 +60,14 @@ app.use((err, req, res, next) => {
     error: err.message || 'Internal server error',
     ...(err.code && { code: err.code }),
   });
+});
+
+// ─── API Debug Logger ────────────────────────────────────────────────────────
+app.use((req, res, next) => {
+  if (req.path.startsWith('/api/')) {
+    console.log(`[API-DEBUG] ${req.method} ${req.path} – no matching route`);
+  }
+  next();
 });
 
 // ─── 404 Handler ──────────────────────────────────────────────────────────────

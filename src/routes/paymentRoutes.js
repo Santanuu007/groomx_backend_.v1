@@ -269,4 +269,18 @@ router.get('/config', (req, res) => {
   });
 });
 
+// ─── Trailing-slash fallbacks (Render/Vercel may add trailing slashes) ────
+router.post('/create-order/', (req, res, next) => {
+  router.post('/create-order')(req, res, next);
+});
+router.post('/capture/', (req, res, next) => {
+  router.post('/capture')(req, res, next);
+});
+router.post('/verify/', (req, res, next) => {
+  router.post('/verify')(req, res, next);
+});
+router.get('/config/', (req, res, next) => {
+  router.get('/config')(req, res, next);
+});
+
 export default router;
