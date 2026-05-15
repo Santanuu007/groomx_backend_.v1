@@ -29,7 +29,7 @@ const allowedOrigins = [
   'http://localhost:8080',
   'http://localhost:3000',
   process.env.FRONTEND_URL,
-  'https://groomxfrontend1v1-bd236yliv-santanu-shaws-projects.vercel.app',
+  'https://groomx-frontend1-v1-picb2ek1q-santanu94.vercel.app',
 ].filter(Boolean);
 
 app.use((req, res, next) => {
