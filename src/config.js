@@ -9,7 +9,7 @@ export const PLATFORM_COMMISSION_PERCENT = process.env.PLATFORM_COMMISSION_PERCE
 
 // Server config
 export const PORT = process.env.PORT || 3000;
-export const FRONTEND_URL = process.env.FRONTEND_URL || 'https://groomx-frontend1-v1-picb2ek1q-santanu94.vercel.app';
+export const FRONTEND_URL = process.env.FRONTEND_URL || 'https://groomx-frontend1-v1.vercel.app';
 
 // Webhook secret (set in Razorpay Dashboard → Webhooks)
 // This is used to verify webhook authenticity
